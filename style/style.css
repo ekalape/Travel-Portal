@@ -33,6 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
+  transition: 0.3s;
   cursor: pointer;
 }
 .btn span {
