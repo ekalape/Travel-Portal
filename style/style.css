@@ -32,7 +32,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px, auto;
+  padding: 10px 0;
+  cursor: pointer;
 }
 .btn span {
   font-family: "Red Hat Text", sans-serif;
@@ -90,6 +91,14 @@ header .login-btn {
   width: 6.44rem;
   height: 41px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+header .login-btn:hover {
+  background-color: #FFFFFF;
+  border: 2px solid #0D606F;
+  color: #0D606F;
+}
+header .login-btn:hover span {
+  color: #0D606F;
 }
 
 /* ------------------- main -------------------- */
@@ -172,6 +181,11 @@ main {
   line-height: 2rem;
   font-weight: 500;
 }
+.explore .explore__search-panel .start-search:hover {
+  background-color: #FFFFFF;
+  border: 3px solid #0D606F;
+  color: #0D606F;
+}
 
 /* ------------------- steps -------------------- */
 .section-title {
@@ -185,7 +199,6 @@ main {
 
 .steps-container {
   width: 82%;
-  /*   height: 424px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -217,6 +230,204 @@ main {
   line-height: 24px;
   font-weight: 400;
   margin-top: 30px;
+}
+
+/* ------------------------ destinations slider ----------------------- */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.slider-container .slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.slider-container .slider .slide-img {
+  display: block;
+  width: 800px;
+  height: 800px;
+}
+.slider-container .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px;
+  gap: 10px;
+}
+.slider-container .controls .dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(242, 120, 92, 0.5);
+}
+.slider-container .controls .checked {
+  background-color: #F2785C;
+}
+.slider-container .find-more {
+  width: 228px;
+  height: 59px;
+  padding-bottom: 25px;
+}
+.slider-container .find-more span {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  line-height: 2rem;
+  font-weight: 500;
+}
+.slider-container .find-more span::before {
+  content: url("/assets/icons/arrow-right.svg");
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 12px;
+  right: 5px;
+}
+.slider-container .find-more:hover {
+  background-color: #FFFFFF;
+  border: 3px solid #0D606F;
+  color: #0D606F;
+}
+.slider-container .find-more:hover span {
+  color: #0D606F;
+}
+.slider-container .find-more:hover span::before {
+  content: url("/assets/icons/arrow-right-dark.svg");
+}
+
+/* ---------------------- travel stories ------------------ */
+.stories-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.stories-container .stories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 8%;
+}
+.stories-container .stories .stories__item {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+.stories-container .stories .stories__item .illustration {
+  display: block;
+  width: 400;
+  height: 250px;
+}
+.stories-container .stories .stories__item .text {
+  display: flex;
+  flex-direction: column;
+}
+.stories-container .stories .stories__item .text .text__title {
+  font-family: "Aleo", serif;
+  font-size: 35px;
+  color: #0D606F;
+  line-height: 42px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.stories-container .stories .stories__item .text .text__description {
+  font-family: "Aleo", serif;
+  font-size: 20px;
+  color: #0D606F;
+  line-height: 24px;
+  font-weight: 400;
+}
+.stories-container .see-more {
+  width: 228px;
+  height: 59px;
+  padding-bottom: 25px;
+  margin: 30px auto;
+}
+.stories-container .see-more span {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  line-height: 2rem;
+  font-weight: 500;
+}
+.stories-container .see-more span::before {
+  content: url("/assets/icons/arrow-right.svg");
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 12px;
+  right: 5px;
+}
+.stories-container .see-more:hover {
+  background-color: #FFFFFF;
+  border: 3px solid #0D606F;
+  color: #0D606F;
+}
+.stories-container .see-more:hover span {
+  color: #0D606F;
+}
+.stories-container .see-more:hover span::before {
+  content: url("/assets/icons/arrow-right-dark.svg");
+}
+
+.bg-footer-wrapper {
+  width: 100%;
+  height: 1400px;
+  background-image: url("/assets/bg_footer.png");
+  background-repeat: no-repeat;
+  background-position: start;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  z-index: -5;
+}
+
+/* .btn:hover {
+    background-color: $primary-color;
+    border: 3px solid $accent-color;
+    span {
+        color: $primary-color;
+    }
+} */
+/* ------------------- footer -------------------- */
+a {
+  appearance: none;
+}
+
+footer {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  align-items: center;
+}
+footer .sign {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+  line-height: 21px;
+  font-weight: 500;
+  margin-right: 20%;
+}
+footer .social {
+  margin-right: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+footer .social * {
+  width: 33px;
+  height: 33px;
 }
 
 /*# sourceMappingURL=style.css.map */
