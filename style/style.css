@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 4;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.bg-wrapper {
+  width: 100%;
+  height: 765px;
+  background-image: url("/assets/bg_header.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  z-index: -5;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  background-color: #0D606F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px, auto;
+}
+.btn span {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+/* ------------------- header -------------------- */
+header {
+  width: 100%;
+  height: 90px;
+  background-color: rgba(242, 120, 92, 0.7);
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+}
+header h2 {
+  font-family: "Magra", sans-serif;
+  font-size: 2rem;
+  color: #FFFFFF;
+  line-height: 39px;
+  font-weight: 600;
+  position: relative;
+}
+header h2::before {
+  content: url("/assets/icons/logo.svg");
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 6;
+  top: 3px;
+  right: 7px;
+}
+header h2:hover {
+  cursor: pointer;
+}
+header .nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 2.6rem;
+  align-items: center;
+}
+header .nav-menu li {
+  list-style-type: none;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1rem;
+  color: #FFFFFF;
+  line-height: 21px;
+  font-weight: 500;
+}
+header .login-btn {
+  width: 6.44rem;
+  height: 41px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+}
+
+/* ------------------- main -------------------- */
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore {
+  width: 62%;
+  margin: 32px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+  margin-bottom: 16.7%;
+}
+.explore .explore__title {
+  font-family: "Aleo", serif;
+  font-size: 5rem;
+  color: #FFFFFF;
+  line-height: 6rem;
+  font-weight: 700;
+  margin-bottom: 46px;
+}
+.explore .explore__subtitle {
+  font-family: "Aleo", serif;
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 24px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 46px;
+}
+.explore .explore__search-panel {
+  width: 100%;
+  height: 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+}
+.explore .explore__search-panel .input-text {
+  width: 62%;
+  height: 30px;
+  background: transparent;
+  border: none;
+  text-align: start;
+  margin: 34px auto;
+  margin-left: 40px;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 24px;
+  color: #F2785C;
+  line-height: 29px;
+  font-weight: 400;
+  font-style: italic;
+}
+.explore .explore__search-panel .input-text::placeholder {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 24px;
+  color: #F2785C;
+  line-height: 29px;
+  font-weight: 400;
+  font-style: italic;
+}
+.explore .explore__search-panel .input-text:focus, .explore .explore__search-panel .input-text:active, .explore .explore__search-panel .input-text:hover, .explore .explore__search-panel .input-text:focus-within {
+  outline: 0;
+}
+.explore .explore__search-panel .start-search {
+  width: 228px;
+  height: 59px;
+  margin-right: 18px;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+/* ------------------- steps -------------------- */
+.section-title {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 2.5rem;
+  color: #F2785C;
+  line-height: 3.3rem;
+  font-weight: 500;
+  margin: 40px;
+}
+
+.steps-container {
+  width: 82%;
+  /*   height: 424px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  margin-bottom: 50px;
+}
+.steps-container .steps {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.steps-container .steps .steps__item {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.steps-container .steps .steps__item img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.steps-container .steps .steps__item span {
+  display: block;
+  font-family: "Aleo", serif;
+  font-size: 20px;
+  color: #0D606F;
+  line-height: 24px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
