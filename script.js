@@ -1,15 +1,29 @@
 (() => {
-    Array.prototype.goo = function(func) {
-        const initialArr = this;
-        const resultArr = [];
-        for (a of initialArr) {
-            resultArr.push(func(a));
+    class Cube {
+        length;
+
+        constructor(length) {
+                this.length = length;
+            }
+            //sa = 6*(a*a)
+            //v = a*a*a
+        get volume() {
+            return Math.pow(this.length, 3);
         }
-        console.log(`this is ${resultArr}`);
-        return resultArr;
+        get surfaceArea() {
+            return 6 * Math.pow(this.length, 2);
+        }
+        set volume(value) {
+            this.length = Math.cbrt(value);
+
+        }
+        set surfaceArea(value) {
+            this.length = Math.sqrt(value / 6);
+        }
     }
 
+    let c = new Cube(2);
+    c.surfaceArea = 12
+    console.log(c.length);
 
-    /*  console.log([1, 2, 3].goo(x => 2 * x));
-     */
 })()
