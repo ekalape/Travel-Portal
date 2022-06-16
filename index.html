@@ -19,16 +19,25 @@
         <h2>Travel Portal</h2>
 
         <ul class="nav-menu">
-            <li>How it works</li>
-            <li>Plan Your Trip</li>
-            <li>Destinations</li>
-            <li>Travel Stories</li>
+
+            <a href="#steps-section">
+                <li> How it works</li>
+            </a>
+            <a href="#explore-section">
+                <li>Plan Your Trip</li>
+            </a>
+            <a href="#destinations-section">
+                <li>Destinations</li>
+            </a>
+            <a href="#stories-section">
+                <li>Travel Stories</li>
+            </a>
         </ul>
 
         <button class="login-btn btn"><span>Login</span></button>
     </header>
     <main>
-        <section class="explore">
+        <section class="explore" id="explore-section">
             <h1 class="explore__title">Explore the beauty of the World</h1>
             <p class="explore__subtitle">Recieve personalized recommendations for countries, hotels, activities and more</p>
             <div class="explore__search-panel">
@@ -37,7 +46,7 @@
 
             </div>
         </section>
-        <section class="steps-container">
+        <section class="steps-container" id="steps-section">
             <h3 class="section-title">3 STEPS TO THE PERFECT TRIP</h3>
             <div class="steps">
                 <div class="steps__item">
@@ -54,8 +63,11 @@
                 </div>
             </div>
         </section>
-        <section class="slider-container">
+        <section class="slider-container" id="destinations-section">
             <h3 class="section-title">POPULAR DESTINATIONS</h3>
+            <div class="back change-slide-btn">
+                &laquo;</div>
+            <div class="forward change-slide-btn">&raquo;</div>
             <div class="slider">
                 <img class="slider__item" src="assets/dest/dest1.png" alt="Destination image">
                 <img class="slider__item" src="assets/dest/dest2.png" alt="Destination image">
@@ -70,7 +82,7 @@
                 <span>Find More</span>
             </button>
         </section>
-        <section class="stories-container">
+        <section class="stories-container" id="stories-section">
             <h3 class="section-title">TRAVEL STORIES</h3>
             <div class="stories">
                 <div class="stories__item">

@@ -1,29 +1,31 @@
 (() => {
-    class Cube {
-        length;
+    Array.prototype.redu = function(func, init) {
 
-        constructor(length) {
-                this.length = length;
-            }
-            //sa = 6*(a*a)
-            //v = a*a*a
-        get volume() {
-            return Math.pow(this.length, 3);
+        let result;
+        let count;
+        if (init) {
+            result = init;
+            count = 0;
+        } else {
+            result = this[0];
+            count = 1
         }
-        get surfaceArea() {
-            return 6 * Math.pow(this.length, 2);
+        for (let i = count; i < this.length; i++) {
+            result = func(result, this[i])
         }
-        set volume(value) {
-            this.length = Math.cbrt(value);
 
-        }
-        set surfaceArea(value) {
-            this.length = Math.sqrt(value / 6);
-        }
+        return result
     }
+    console.log([1, 2, 2, 3, 4, 4].redu(((x, y) => {
+        if (!x[y]) {
+            console.log(`${y} not exists, so = 0`);
+            x[y] = 0;
+        }
+        console.log(`${y} exists, so ${x[y]} ++`);
+        x[y] += 1;
 
-    let c = new Cube(2);
-    c.surfaceArea = 12
-    console.log(c.length);
+
+        return x;
+    }), {}));
 
 })()

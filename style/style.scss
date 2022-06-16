@@ -22,6 +22,36 @@ sans-serif;
     font-weight: $f-weight;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1)
+    }
+    40% {
+        transform: scale(1.2)
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+a {
+    appearance: none;
+    text-decoration: none;
+}
+
 body {
     max-width: 1440px;
     width: 100%;
@@ -236,6 +266,7 @@ main {
         width: 100%;
         display: flex;
         justify-content: space-around;
+        margin-top: 20px;
         .steps__item {
             width: 20rem;
             display: flex;
@@ -269,6 +300,39 @@ main {
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
+    position: relative;
+    .change-slide-btn {
+        position: absolute;
+        top: 45%;
+        width: 100px;
+        height: 100px;
+        background-color: $primary-color;
+        opacity: 0.2;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        padding-bottom: 10px;
+        transition: 0.4s;
+        @include text-appearance($f-family-sans,
+        3rem,
+        4rem,
+        700,
+        $accent-color);
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+    }
+    .forward {
+        right: 5%;
+        padding-left: 5px;
+    }
+    .back {
+        left: 5%;
+        padding-right: 5px;
+    }
     .slider {
         display: flex;
         justify-content: center;
@@ -298,26 +362,6 @@ main {
         }
         .checked {
             background-color: $secondary-color;
-        }
-    }
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-        }
-        20% {
-            transform: scale(1.1)
-        }
-        40% {
-            transform: scale(1.2)
-        }
-        60% {
-            transform: scale(1);
-        }
-        80% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
         }
     }
     .find-more {
@@ -446,20 +490,7 @@ main {
 }
 
 
-/* .btn:hover {
-    background-color: $primary-color;
-    border: 3px solid $accent-color;
-    span {
-        color: $primary-color;
-    }
-} */
-
-
 /* ------------------- footer -------------------- */
-
-a {
-    appearance: none;
-}
 
 footer {
     width: 100%;
@@ -485,6 +516,9 @@ footer {
         * {
             width: 33px;
             height: 33px;
+            &:hover {
+                animation: pulse 1s infinite;
+            }
         }
     }
 }
