@@ -333,20 +333,18 @@ main {
         left: 5%;
         padding-right: 5px;
     }
-    .slider {
+    .swiper {
         width: 100%;
         height: fit-content;
-        overflow: hidden;
+        // overflow: hidden;
     }
-    .slider-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 60px;
-        .slide-img {
+    .swiper-wrapper {
+        /*  gap: 80px; */
+        margin-left: 30%;
+        margin-bottom: 100px;
+        .swiper-slide img {
             display: block;
-            width: 800px;
-            height: 800px;
+            width: 600px;
         }
     }
     .controls {
@@ -368,6 +366,19 @@ main {
         .checked {
             background-color: $secondary-color;
         }
+    }
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgba(242, 120, 92, 0.5);
+        &:hover {
+            cursor: pointer;
+            animation: pulse 1s infinite;
+        }
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $secondary-color;
     }
     .find-more {
         width: 228px;

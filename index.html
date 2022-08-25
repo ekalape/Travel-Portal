@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Portal</title>
     <link rel="shortcut icon" href="assets/icons/logo_dark.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,20 +66,27 @@
         </section>
         <section class="slider-container" id="destinations-section">
             <h3 class="section-title">POPULAR DESTINATIONS</h3>
-            <div class="back change-slide-btn">
+            <!--             <div class="back change-slide-btn">
                 &laquo;</div>
-            <div class="forward change-slide-btn">&raquo;</div>
-            <div class="slider">
-                <div class="slider-wrapper">
-                    <!--    <img class="slider__item" src="assets/dest/dest1.png" alt="Destination image">
-                <img class="slider__item" src="assets/dest/dest2.png" alt="Destination image">
-                <img class="slider__item" src="assets/dest/dest3.png" alt="Destination image"> -->
+            <div class="forward change-slide-btn">&raquo;</div> -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="assets/dest/dest1.png" alt="">
+                    </div>
+                    <div class="swiper-slide"> <img src="assets/dest/dest2.png" alt=""></div>
+                    <div class="swiper-slide"> <img src="assets/dest/dest3.png" alt=""></div>
+
                 </div>
-            </div>
-            <div class="controls">
-                <!--     <div class="dot"></div>
-                <div class="dot checked"></div>
-                <div class="dot"></div> -->
+                <!-- If we need pagination -->
+                <div class="swiper-pagination controls"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="back change-slide-btn">&laquo;</div>
+                <div class="forward change-slide-btn">&raquo;</div>
+
             </div>
             <button class="btn find-more">
                 <span>Find More</span>
@@ -139,8 +147,9 @@
         </div>
     </footer>
     <!-- <script src="script.js"></script> -->
-    <script src="js.js"></script>
     <script src="swiper.js"></script>
+    <script src="js.js"></script>
+
 </body>
 
 </html>
