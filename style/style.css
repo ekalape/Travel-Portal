@@ -279,7 +279,7 @@ main {
   width: 100px;
   height: 100px;
   background-color: #FFFFFF;
-  opacity: 0.2;
+  opacity: 0.4;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -295,7 +295,7 @@ main {
 }
 .slider-container .change-slide-btn:hover {
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 .slider-container .forward {
   right: 5%;
@@ -306,12 +306,17 @@ main {
   padding-right: 5px;
 }
 .slider-container .slider {
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+}
+.slider-container .slider-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 60px;
 }
-.slider-container .slider .slide-img {
+.slider-container .slider-wrapper .slide-img {
   display: block;
   width: 800px;
   height: 800px;

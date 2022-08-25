@@ -307,7 +307,7 @@ main {
         width: 100px;
         height: 100px;
         background-color: $primary-color;
-        opacity: 0.2;
+        opacity: 0.4;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -322,7 +322,7 @@ main {
         $accent-color);
         &:hover {
             cursor: pointer;
-            opacity: 0.7;
+            opacity: 0.85;
         }
     }
     .forward {
@@ -334,6 +334,11 @@ main {
         padding-right: 5px;
     }
     .slider {
+        width: 100%;
+        height: fit-content;
+        overflow: hidden;
+    }
+    .slider-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
