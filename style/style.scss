@@ -22,6 +22,36 @@ sans-serif;
     font-weight: $f-weight;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1.1)
+    }
+    40% {
+        transform: scale(1.2)
+    }
+    60% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+a {
+    appearance: none;
+    text-decoration: none;
+}
+
 body {
     max-width: 1440px;
     width: 100%;
@@ -236,6 +266,7 @@ main {
         width: 100%;
         display: flex;
         justify-content: space-around;
+        margin-top: 20px;
         .steps__item {
             width: 20rem;
             display: flex;
@@ -269,15 +300,51 @@ main {
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
-    .slider {
+    position: relative;
+    .change-slide-btn {
+        position: absolute;
+        top: 45%;
+        width: 100px;
+        height: 100px;
+        background-color: $primary-color;
+        opacity: 0.4;
+        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 60px;
-        .slide-img {
+        z-index: 10;
+        padding-bottom: 10px;
+        transition: 0.4s;
+        @include text-appearance($f-family-sans,
+        3rem,
+        4rem,
+        700,
+        $accent-color);
+        &:hover {
+            cursor: pointer;
+            opacity: 0.85;
+        }
+    }
+    .forward {
+        right: 5%;
+        padding-left: 5px;
+    }
+    .back {
+        left: 5%;
+        padding-right: 5px;
+    }
+    .swiper {
+        width: 100%;
+        height: fit-content;
+        // overflow: hidden;
+    }
+    .swiper-wrapper {
+        /*  gap: 80px; */
+        margin-left: 30%;
+        margin-bottom: 100px;
+        .swiper-slide img {
             display: block;
-            width: 800px;
-            height: 800px;
+            width: 600px;
         }
     }
     .controls {
@@ -287,14 +354,31 @@ main {
         margin: 24px;
         gap: 10px;
         .dot {
-            width: 20px;
+            width: 1.25rem;
             height: 20px;
             border-radius: 50%;
             background-color: rgba(242, 120, 92, 0.5);
+            &:hover {
+                cursor: pointer;
+                animation: pulse 1s infinite;
+            }
         }
         .checked {
             background-color: $secondary-color;
         }
+    }
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: rgba(242, 120, 92, 0.5);
+        &:hover {
+            cursor: pointer;
+            animation: pulse 1s infinite;
+        }
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $secondary-color;
     }
     .find-more {
         width: 228px;
@@ -422,20 +506,7 @@ main {
 }
 
 
-/* .btn:hover {
-    background-color: $primary-color;
-    border: 3px solid $accent-color;
-    span {
-        color: $primary-color;
-    }
-} */
-
-
 /* ------------------- footer -------------------- */
-
-a {
-    appearance: none;
-}
 
 footer {
     width: 100%;
@@ -461,6 +532,9 @@ footer {
         * {
             width: 33px;
             height: 33px;
+            &:hover {
+                animation: pulse 1s infinite;
+            }
         }
     }
 }
